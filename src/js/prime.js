@@ -13,7 +13,7 @@ function init(){
 function getPrimes(max){
   primes = [];
   for(var i = 2; primes.length < max; i++){
-    if(isPrime(i)){
+    if(mymodule.isPrime(i)){
       primes.push(i);
       //console.log(i);
     }
@@ -29,7 +29,7 @@ function getPrimes(max){
 function setBigPrime(max){
   var primeCount = 0;
   for(var i = 2; primeCount < max; i++){
-    if(isPrime(i)){
+    if(mymodule.isPrime(i)){
       bigPrime = i;
       primeCount ++;
       //console.log(bigPrime);
@@ -40,14 +40,28 @@ function setBigPrime(max){
 // A prime number (or a prime) is a natural number greater than 1 that has
 // no positive divisors other than 1 and itself.
 
-function isPrime(num) {
-    if(num < 2) return false;
-    for (var i = 2; i < num; i++) {
-        if(num % i === 0)
-            return false;
-    }
-    return true;
-}
+// var isPrime = function(num) {
+//     if(num < 2) return false;
+//     for (var i = 2; i < num; i++) {
+//         if(num % i === 0)
+//             return false;
+//     }
+//     return true;
+// };
+// if(typeof module.exports !== 'undefined'){
+//   exports.isPrime = isPrime;
+// }
+(function(exports){
+  exports.isPrime = function(num) {
+      if(num < 2) return false;
+      for (var i = 2; i < num; i++) {
+          if(num % i === 0)
+              return false;
+      }
+      return true;
+  };
+})(typeof exports === 'undefined'? this['mymodule']={}: exports);
+
 
 function showPrimes(){
   if(nPrimes < 50){

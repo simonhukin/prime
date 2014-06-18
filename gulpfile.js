@@ -81,8 +81,8 @@ gulp.task('styles', function() {
 });
 
 //handle test
-gulp.task('test', function() {
-	gulp.src('spec/test.js')
+gulp.task('jasmine', function() {
+	gulp.src('./spec/test.js')
 		.pipe(jasmine());
 });
 
@@ -97,7 +97,7 @@ gulp.task('misc', function() {
 });
 
 // default gulp task
-gulp.task('default', ['imagemin', 'iconmin', 'htmlpage', 'scripts', 'styles', 'test', 'misc'], function() {
+gulp.task('default', ['imagemin', 'iconmin', 'htmlpage', 'scripts', 'styles', 'jasmine', 'misc'], function() {
 // watch for HTML changes
   gulp.watch('./src/*.html', ['htmlpage']);
 
