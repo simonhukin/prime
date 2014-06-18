@@ -1,0 +1,36 @@
+Coding Challenge 
+
+
+Objective:
+
+We want you to produce a single page app to produce
+multiplication tables of prime numbers.
+
+It must to default to 10 primes.
+It needs to take input in order for the end-user to input any
+numeric argument (maybe we want to see 20/30/40+ primes).
+
+Across the top and down the left side should be the prime
+numbers, and the body of the table should contain the product
+of multiplying those numbers.
+
+If the number of primes is greater than will comfortably
+display a table on screen, default to just printing the ‘n’th
+prime number and a message explaining the size is too great to
+display a table. i.e. if the user inputs 50000, just print the
+50,000th prime and a message. Use your discretion in deciding
+how big is too big.
+
+
+Notes:
+
+- Consider Code complexity.
+- Consider cases where we want more than ‘n’ primes (What
+if we just wanted to generate the 65,000
+th prime number?)
+- Consider KISS and not over-engineering
+- Consider re-usability
+- DO NOT use a library method for calculating the prime
+(write your own).
+- Use Tests. TDD/BDD. Cannot stress tests enough!
+- Impress us.

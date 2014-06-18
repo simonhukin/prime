@@ -1,0 +1,36 @@
+  body
+  {
+    background: #f0f4f4;
+		color: #5b5b5b;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+  }
+
+
+  /* Tables */
+
+  table
+  {
+  	/*width: 100%;*/
+  }
+
+  	table tbody tr:nth-child(2n+1)
+  	{
+  		background: #cdcfcf;
+  	}
+
+  	table td, th
+  	{
+  		padding: 0.5em;
+      text-align: center;
+  	}
+
+    table .prime
+    {
+      font-weight: 800;
+    }
+
+  #intro, #input_area, #prime_area
+  {
+    padding: 1em;
+  }
